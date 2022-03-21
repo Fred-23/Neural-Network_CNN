@@ -1,0 +1,18 @@
+import matplotlib.pyplot as plt
+import numpy as np
+from PIL import Image
+
+# Charger l'image comme matrice de pixels
+img = np.array(Image.open('simba.png'))
+
+# Générer et afficher l'histogramme
+# Pour le normaliser : argument density=True dans plt.hist
+# Pour avoir l'histogramme cumulé : argument cumulative=True
+n, bins, patches = plt.hist(img.flatten(), bins=range(256))
+plt.show()
+
+# We can use the fonction "autocontrast" to scale the grey level of an image between 0 and 255. (Three-rule)
+#Contraste répartition de du nombre de pixels. On peut le régler avec une egalisation d'histogrammes
+#Matlab ou Python
+
+# Essayer les fonctions je suis au deuxieme chapitre pour l'instant

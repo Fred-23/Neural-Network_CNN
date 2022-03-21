@@ -12,4 +12,6 @@ https://machinelearningmastery.com/pooling-layers-for-convolutional-neural-netwo
 https://openclassrooms.com/fr/courses/4470531-classez-et-segmentez-des-donnees-visuelles/4470538-comprenez-comment-un-ordinateur-voit-une-image
 
 
-//Ne pas oublier d'installer les librairies numpy et pillow avant le lancement du fichier
+//Ne pas oublier d'installer les librairies nécessaires avant le lancement du fichier python
+
+https://openclassrooms.com/fr/courses/4470531-classez-et-segmentez-des-donnees-visuelles/5082166-quest-ce-quun-reseau-de-neurones-convolutif-ou-cnn
