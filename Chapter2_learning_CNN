@@ -7,6 +7,7 @@ img = np.array(Image.open('simba.png'))
 img1= Image.open("simba_low.png")
 img1.show()
 img2 =ImageOps.autocontrast(img1,cutoff =5 ,ignore =5)
+#img2 =ImageOps.equalize(img1,cutoff =5 ,ignore =5)
 img2.show()
 # Générer et afficher l'histogramme
 # Pour le normaliser : argument density=True dans plt.hist
@@ -19,3 +20,6 @@ plt.show()
 #Matlab ou Python
 
 # Essayer les fonctions je suis au deuxieme chapitre pour l'instant
+
+#Interpolation permet de rajouter de la résolution à une image en rajoutant des tons de pixel proches de la couleur initiale
+#Avec les fonctions resample et expand
