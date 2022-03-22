@@ -1,10 +1,13 @@
 import matplotlib.pyplot as plt
 import numpy as np
-from PIL import Image
+from PIL import Image, ImageOps
 
 # Charger l'image comme matrice de pixels
 img = np.array(Image.open('simba.png'))
-
+img1= Image.open("simba_low.png")
+img1.show()
+img2 =ImageOps.autocontrast(img1,cutoff =5 ,ignore =5)
+img2.show()
 # Générer et afficher l'histogramme
 # Pour le normaliser : argument density=True dans plt.hist
 # Pour avoir l'histogramme cumulé : argument cumulative=True
