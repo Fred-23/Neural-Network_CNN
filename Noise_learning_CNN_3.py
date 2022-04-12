@@ -1,6 +1,7 @@
 import matplotlib.pyplot as plt
 import numpy as np
 from PIL import Image, ImageOps, ImageFilter
+#https://www.researchgate.net/figure/List-of-formulas-for-the-operations-in-the-CNN-Operation-Formula_tbl1_338431622
 
 # Charger l'image sous forme d'une matrice de pixels
 img = np.array(Image.open('simba.png'))
