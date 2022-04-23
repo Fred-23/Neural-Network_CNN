@@ -6,7 +6,7 @@ model2 = VGG16() # Création du modèle VGG-16 implementé par Keras
 from keras.preprocessing.image import load_img, img_to_array
 from keras.applications.vgg16 import preprocess_input
 
-img = load_img('cat.jpg', target_size=(224, 224))  # Charger l'image
+img = load_img('image_test1.jpg', target_size=(224, 224))  # Charger l'image
 img = img_to_array(img)  # Convertir en tableau numpy
 img = img.reshape((1, img.shape[0], img.shape[1], img.shape[2]))  # Créer la collection d'images (un seul échantillon)
 img = preprocess_input(img)  # Prétraiter l'image comme le veut VGG-16
