@@ -1,12 +1,23 @@
 # packages
+import os, sys
 import cv2
+from PIL import Image
 import numpy as np
 
+
+
+
+#image directory path--CHANGE FOR YOUR USAGE
+IMG_DIR = 'C:/Users/freda/OneDrive/Bureau/ALL/1-ETS/Images_Samples/Handwritten'
+
+
+size = (28,28)
+
 # init a canvas
-canvas = np.zeros((600, 800, 1), np.uint8)
+canvas = np.zeros((244, 244, 1), np.uint8)
 
 # make canvas white
-canvas.fill(255)
+canvas.fill(0)
 
 # global coordinates and drawing state
 x = 0
@@ -32,7 +43,7 @@ def draw(event, current_x, current_y, flags, params):
         # draw only if mouse is down
         if drawing:
             # draw the line
-            cv2.line(canvas, (current_x, current_y), (x, y), 0, thickness=3)
+            cv2.line(canvas, (current_x, current_y), (x, y), 255, thickness=3)
             
             # update coordinates
             x, y = current_x, current_y
@@ -42,7 +53,6 @@ def draw(event, current_x, current_y, flags, params):
         # disable drawing flag
         drawing = False
     
-
 
 # display the canvas in a window
 cv2.imshow('Draw', canvas)
@@ -56,7 +66,15 @@ while True:
     cv2.imshow('Draw', canvas)
     
     # break out of a program on 'Esc' button hit
-    if cv2.waitKey(1) & 0xFF == 27: break
+    if cv2.waitKey(1) & 0xFF == 27: 
+        # PIL image can be saved as .png .jpg .gif or .bmp file (among others)
+        #filename = "my_drawing.png"
+        #canvas = cv2.resize(crop, dsize=size, interpolation=cv2.INTER_CUBIC)
+        isWritten = cv2.imwrite(IMG_DIR+'/handwritten_numbers.png', canvas)
+        break
+
+
+
 
 # clean up windows
 cv2.destroyAllWindows()
