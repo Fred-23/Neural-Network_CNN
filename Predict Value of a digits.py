@@ -27,7 +27,7 @@ def load_image(filename):
 
 def run_example():
 	# load the image
-	img = load_image('Images_Samples/six_5.png')
+	img = load_image('Images_Samples/Handwritten/handwritten_numbers.png')
 	# load model
 	model = load_model('final_model.h5')
 	# predict the class

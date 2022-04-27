@@ -3,9 +3,7 @@ import os, sys
 import cv2
 from PIL import Image
 import numpy as np
-
-
-
+from resizeimage import resizeimage
 
 #image directory path--CHANGE FOR YOUR USAGE
 IMG_DIR = 'C:/Users/freda/OneDrive/Bureau/ALL/1-ETS/Images_Samples/Handwritten'
@@ -70,7 +68,13 @@ while True:
         # PIL image can be saved as .png .jpg .gif or .bmp file (among others)
         #filename = "my_drawing.png"
         #canvas = cv2.resize(crop, dsize=size, interpolation=cv2.INTER_CUBIC)
+        
+    
+        
         isWritten = cv2.imwrite(IMG_DIR+'/handwritten_numbers.png', canvas)
+        img = Image.open(IMG_DIR+'/handwritten_numbers.png')
+        img = resizeimage.resize_contain(img, size)
+        img.save(IMG_DIR+'/handwritten_numbers_resize.png', img.format)
         break
 
 
